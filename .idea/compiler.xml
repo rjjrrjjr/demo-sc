@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="consumer-80" />
+        <module name="consumer-feign" />
+        <module name="consumer-hystrix-dashboard" />
+        <module name="eureka-7001" />
+        <module name="eureka-7002" />
+        <module name="eureka-7003" />
+        <module name="provider-8001" />
+        <module name="provider-8002" />
+        <module name="provider-8003" />
+        <module name="provider-hystrix-8001" />
+        <module name="sc-api" />
+        <module name="zuul-9527" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer-80" target="1.7" />
+      <module name="consumer-feign" target="1.7" />
+      <module name="consumer-hystrix-dashboard" target="1.7" />
+      <module name="eureka-7001" target="1.7" />
+      <module name="eureka-7002" target="1.7" />
+      <module name="eureka-7003" target="1.7" />
+      <module name="provider-8001" target="1.7" />
+      <module name="provider-8002" target="1.7" />
+      <module name="provider-8003" target="1.7" />
+      <module name="provider-hystrix-8001" target="1.7" />
+      <module name="sc" target="1.7" />
+      <module name="sc-api" target="1.7" />
+      <module name="zuul-9527" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

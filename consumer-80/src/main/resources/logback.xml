@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="3 seconds" debug="false">
+
+    <contextName>projectmanager</contextName>
+    <!--配置常量，在后面的配置中使用 -->
+    <property name="PROJECT_NAME" value="sc" />
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
+    <property name="LOG_HOME" value="/home/apps/var/log/${PROJECT_NAME}" />
+    <!--定义日志输出格式 -->
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p [%t] %replace(%replace(%caller{1}){'\t|Caller.{1}0|\r\n', ''}){'\n', ''} - %m%n"/>
+    <!-- 定义日志输出字符集 -->
+    <property name="LOG_CHARSET" value="UTF-8" />
+
+    <!-- 控制台 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <logger name="com.rj" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+</configuration>
